@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import SignalementForm from './composants/SignalementForm';
+import SignalementMap from './composants/SignalementMap';
+import SignalementList from './composants/SignalementList';
+import Register from './composants/Register';
+import Login from './composants/Login';
+import Home from './composants/Home';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signalement" element={<SignalementForm />} />
+        <Route path="/map" element={<SignalementMap />} />
+        <Route path="/liste" element={<SignalementList />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </div>
   );
 }

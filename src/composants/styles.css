@@ -1,0 +1,171 @@
+/* styles.css */
+
+/* Couleurs de base */
+:root {
+  --primary-color: #4CAF50;  /* Vert */
+  --secondary-color: #2C3E50; /* Bleu foncé */
+  --background-color: #f0f0f0;
+  --text-color: #333;
+  --highlight-color: #f39c12;
+}
+
+/* Style global */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* En-tête */
+header {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Liste des signalements */
+.signalement-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Style de chaque élément de signalement */
+.signalement-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.signalement-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.signalement-item h3 {
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.signalement-item p {
+  color: var(--text-color);
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Boutons d'action */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--highlight-color);
+}
+
+/* Petit message de "Aucun signalement" */
+.no-signalement {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+}
+
+
+/* Styles pour le formulaire de signalement */
+.signalement-form {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.signalement-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.signalement-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+.signalement-form input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.form {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+button {
+  padding: 10px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  background: #2980b9;
+}
+
+
+.signalement-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signalement-form button:hover {
+  background-color: #357ABD;
+}
